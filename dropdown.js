@@ -11,7 +11,7 @@ layui.define(['jquery'], function (exports) {
 	var dropdown = {
 		"v" : '1.0.0'
     };
-
+	
 	//渲染
 	dropdown.render = function(opt){
 		$(CLASS_NAME).each(function (i, elem) {
@@ -19,8 +19,8 @@ layui.define(['jquery'], function (exports) {
 			var ulBox = jqelem.children('ul');
 			var timer = '';
 			ulBox.addClass('layui-anim layui-anim-upbit');
-			var event = jqelem.hasClass('dropdown-click') ? 'click' : 'mouseover';
-			
+			var event = jqelem.hasClass('dropdown-click') ? 'click' : 'mouseenter';
+
 			jqelem.on(event, function(e) {
 				var disabled = jqelem.hasClass('dropdown-disabled');
 				if(disabled){return false}
@@ -34,8 +34,8 @@ layui.define(['jquery'], function (exports) {
 				}
 				ulBox.show();
 			});
-			if(event == 'mouseover'){
-				jqelem.on("mouseout", function(e) {
+			if(event == 'mouseenter'){
+				jqelem.on("mouseleave", function(e) {
 					timer = setTimeout(function(){
 						ulBox.hide();
 					}, 300);

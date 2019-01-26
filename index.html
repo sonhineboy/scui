@@ -109,7 +109,7 @@
 			
 			<fieldset class="layui-elem-field layui-field-title" id="demo2"><legend>标题和禁用样式</legend></fieldset>
 			<div class="layui-text">
-				<p>可以添加标题类 <em>&lt;h4&gt;HEADER&lt;/h4&gt;</em> 和禁用类 <em>li.dropdown-item-disabled</em></p>
+				<p>可以添加标题标签 <em>&lt;h4&gt;HEADER&lt;/h4&gt;</em> 和禁用类 <em>li.dropdown-item-disabled</em></p>
 			</div>
 			
 			<div class="layui-dropdown">
@@ -117,15 +117,15 @@
 				<ul>
 					<h4>HEADER</h4>
 					<li>
-						<a href="javascript:;">1st menu item</a>
+						<a href="javascript:;"><i class="layui-icon layui-icon-star-fill"></i>1st menu item</a>
 					</li>
 					<li class="dropdown-item-disabled">
-						<a href="javascript:;">2nd menu item</a>
+						<a href="javascript:;"><i class="layui-icon layui-icon-template-1"></i>2nd menu item</a>
 					</li>
 					<hr>
 					<h4>HEADER</h4>
 					<li>
-						<a href="javascript:;">3rd menu item</a>
+						<a href="javascript:;"><i class="layui-icon layui-icon-set-fill"></i>3rd menu item</a>
 					</li>
 				</ul>
 			</div>
@@ -137,22 +137,6 @@
 			
 			<div class="layui-dropdown">
 				<button class="layui-btn layui-btn-normal">百搭按钮</button>
-				<ul>
-					<li>
-						<a href="javascript:;">1st menu item</a>
-					</li>
-					<li>
-						<a href="javascript:;">2nd menu item</a>
-					</li>
-					<hr>
-					<li>
-						<a href="javascript:;">3rd menu item</a>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="layui-dropdown">
-				<button class="layui-btn layui-btn-normal"><i class="layui-icon layui-icon-delete"></i></button>
 				<ul>
 					<li>
 						<a href="javascript:;">1st menu item</a>
@@ -203,23 +187,20 @@
 					<button class="layui-btn layui-btn-normal layui-btn-sm layui-btn-fluid">Download ZIP</button>
 				</ul>
 			</div>
-			
 			<div class="layui-dropdown">
-				<input type="text" placeholder="一个会跳舞的输入框" class="layui-input">
+				<div class="layui-input-inline">
+					<input type="text" placeholder="一个会跳舞的输入框" class="layui-input">
+				</div>
 				<ul>
+					<h4>是不是在找</h4>
 					<li>
-						<a href="javascript:;">1st menu item</a>
+						<a href="javascript:;">另一个会跳舞的下拉框</a>
 					</li>
 					<li>
-						<a href="javascript:;">2nd menu item</a>
-					</li>
-					<hr>
-					<li>
-						<a href="javascript:;">3rd menu item</a>
+						<a href="javascript:;">一杯忧郁的可乐</a>
 					</li>
 				</ul>
 			</div>
-
 			
 			<fieldset class="layui-elem-field layui-field-title" id="parm"><legend>核心方法和参数</legend></fieldset>
 			<div class="layui-text">
@@ -227,7 +208,7 @@
 			</div>
 			<pre class="layui-code" lay-encode="true">
 			//1、加载CSS
-			<link rel="stylesheet" href="tableFilter.css">
+			<link rel="stylesheet" href="dropdown.css">
 			    
 			//2、组件使用
 			layui.use(['dropdown'], function(){
@@ -250,6 +231,7 @@
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript" src="library/layui/layui.js"></script>
 <script type="text/javascript">
 layui.use(['element', 'code', 'dropdown'], function(){
