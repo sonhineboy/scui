@@ -1,5 +1,6 @@
 module.exports = {
 	title: 'SCUI',
+	base: ".",
 	description: '一套简单的中后台前端解决方案',
 	port: 2801,
 	themeConfig: {
