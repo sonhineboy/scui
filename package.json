@@ -1,6 +1,9 @@
 {
 	"scripts": {
-	  "serve": "vuepress dev docs --temp .temp",
-	  "build": "vuepress build docs"
+		"serve": "vuepress dev docs --temp .temp",
+		"build": "vuepress build docs"
+	},
+	"dependencies": {
+		"vuepress": "^1.8.2"
 	}
 }

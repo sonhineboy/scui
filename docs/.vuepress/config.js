@@ -17,6 +17,7 @@ module.exports = {
 			text: "Gitee",
 			link: "https://gitee.com/lolicode/scui",
 		}],
+		sidebarDepth: 1,
 		sidebar: {
 			'/guide/': [
 				{
