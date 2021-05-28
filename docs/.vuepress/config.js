@@ -11,6 +11,9 @@ module.exports = {
 			text: "组件",
 			link: "/vab/",
 		},{
+			text: "演示地址",
+			link: "https://lolicode.gitee.io/scui-doc/demo",
+		},{
 			text: "Gitee",
 			link: "https://gitee.com/lolicode/scui",
 		}],

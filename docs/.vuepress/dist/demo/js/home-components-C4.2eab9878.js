@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["home-components-C4"],{3732:function(e,o,n){"use strict";n.r(o);var t=n("7a23");var c={title:"模块4",props:{msg:String},mounted:function(){console.log("加载C4")},render:function(e,o,n,c,r,p){var s=Object(t.resolveComponent)("el-empty");return Object(t.openBlock)(),Object(t.createBlock)(s,{description:"描述文字"})}};o.default=c}}]);
