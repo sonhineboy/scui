@@ -26,7 +26,7 @@ module.exports = {
 					children: [
 						['/guide/', '介绍'],
 						['/guide/router', '路由'],
-						['/guide/style', '样式'],
+						['/guide/style', '布局样式'],
 						['/guide/server', '和服务端进行交互'],
 						['/guide/newPage', '第一个页面'],
 						['/guide/build', '构建与部署']
