@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>模块抽离 | SCUI</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="一套简单的中后台前端解决方案">
+    
+    <link rel="preload" href="/scui-doc/assets/css/0.styles.8df3eea5.css" as="style"><link rel="preload" href="/scui-doc/assets/js/app.3cfde67c.js" as="script"><link rel="preload" href="/scui-doc/assets/js/2.195a8091.js" as="script"><link rel="preload" href="/scui-doc/assets/js/17.c2e29476.js" as="script"><link rel="prefetch" href="/scui-doc/assets/js/10.df493398.js"><link rel="prefetch" href="/scui-doc/assets/js/11.a448ce5a.js"><link rel="prefetch" href="/scui-doc/assets/js/12.a5d27fdf.js"><link rel="prefetch" href="/scui-doc/assets/js/13.05880a38.js"><link rel="prefetch" href="/scui-doc/assets/js/14.9c78302d.js"><link rel="prefetch" href="/scui-doc/assets/js/15.c0348dac.js"><link rel="prefetch" href="/scui-doc/assets/js/16.d45cdcca.js"><link rel="prefetch" href="/scui-doc/assets/js/18.fd06c3c4.js"><link rel="prefetch" href="/scui-doc/assets/js/19.8ad6e948.js"><link rel="prefetch" href="/scui-doc/assets/js/20.f8930590.js"><link rel="prefetch" href="/scui-doc/assets/js/3.b4d4febe.js"><link rel="prefetch" href="/scui-doc/assets/js/4.e7c996f5.js"><link rel="prefetch" href="/scui-doc/assets/js/5.6eff8140.js"><link rel="prefetch" href="/scui-doc/assets/js/6.17d5dd20.js"><link rel="prefetch" href="/scui-doc/assets/js/7.de41a641.js"><link rel="prefetch" href="/scui-doc/assets/js/8.2e7ea06d.js"><link rel="prefetch" href="/scui-doc/assets/js/9.78f65dcf.js">
+    <link rel="stylesheet" href="/scui-doc/assets/css/0.styles.8df3eea5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/scui-doc/" class="home-link router-link-active"><!----> <span class="site-name">SCUI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/scui-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/scui-doc/vab/" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="https://lolicode.gitee.io/scui-doc/demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  演示地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/lolicode/scui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/scui-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/scui-doc/vab/" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="https://lolicode.gitee.io/scui-doc/demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  演示地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/lolicode/scui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scui-doc/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/scui-doc/guide/router.html" class="sidebar-link">路由</a></li><li><a href="/scui-doc/guide/style.html" class="sidebar-link">布局样式</a></li><li><a href="/scui-doc/guide/server.html" class="sidebar-link">和服务端进行交互</a></li><li><a href="/scui-doc/guide/newPage.html" class="sidebar-link">第一个页面</a></li><li><a href="/scui-doc/guide/build.html" class="sidebar-link">构建与部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scui-doc/guide/codestyle.html" class="sidebar-link">代码风格指南</a></li><li><a href="/scui-doc/guide/splitmod.html" aria-current="page" class="active sidebar-link">模块抽离</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/scui-doc/guide/splitmod.html#splitchunks" class="sidebar-link">splitChunks</a></li><li class="sidebar-sub-header"><a href="/scui-doc/guide/splitmod.html#分析" class="sidebar-link">分析</a></li></ul></li><li><a href="/scui-doc/guide/iconfont.html" class="sidebar-link">图标</a></li><li><a href="/scui-doc/guide/global.html" class="sidebar-link">全局</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="模块抽离"><a href="#模块抽离" class="header-anchor">#</a> 模块抽离</h1> <p>当项目时间累积，使用第三方模块的数量将会不断增加，从来导致打包后app.js过大，这时候就要抽离一些非常用或者体积过大的模块。</p> <p>比如本项目中的富文本编辑器和百度echarts。使用频率低，文件还硕大，所以决定将这2着分离出独立的JS文件，自动按需加载使用。</p> <h2 id="splitchunks"><a href="#splitchunks" class="header-anchor">#</a> splitChunks</h2> <p>本项目采用Webpack官方splitChunks分割模块。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//vue.config.js</span>
+
+splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+	chunks<span class="token operator">:</span> <span class="token string">&quot;async&quot;</span><span class="token punctuation">,</span>
+	automaticNameDelimiter<span class="token operator">:</span> <span class="token string">'~'</span><span class="token punctuation">,</span>
+	name<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">//第三方库抽离</span>
+		vendor<span class="token operator">:</span> <span class="token punctuation">{</span>
+			name<span class="token operator">:</span> <span class="token string">&quot;modules&quot;</span><span class="token punctuation">,</span>
+			test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[\\/]node_modules[\\/]</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+			priority<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">10</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		tinymce<span class="token operator">:</span> <span class="token punctuation">{</span>
+			name<span class="token operator">:</span> <span class="token string">&quot;tinymce&quot;</span><span class="token punctuation">,</span>
+			test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[\\/]node_modules[\\/]tinymce[\\/]</span><span class="token regex-delimiter">/</span></span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		echarts<span class="token operator">:</span> <span class="token punctuation">{</span>
+			name<span class="token operator">:</span> <span class="token string">&quot;echarts&quot;</span><span class="token punctuation">,</span>
+			test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[\\/]node_modules[\\/]echarts[\\/]</span><span class="token regex-delimiter">/</span></span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样配置在打包后生成的文件列表，如下：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>┌── dist
+│	└── js
+│	│	├── tinymce.c6a80879.js		<span class="token comment"># 编辑器所用到的依赖</span>
+│	│	├── app.b69faaf9.js
+│	│	├── echarts.168c0bd1.js		<span class="token comment"># 百度echarts用到的依赖</span>
+│	│	├── modules.533004cc.js
+│	│	└── ***.js
+│	└── ***
+</code></pre></div><h2 id="分析"><a href="#分析" class="header-anchor">#</a> 分析</h2> <p>在打包完成后，将在 dist 根目录下生成report.html，可以查看各个模块的体积分析，从而决定是否需要抽离。</p> <img src="/scui-doc/report.jpg"></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/scui-doc/guide/codestyle.html" class="prev">
+        代码风格指南
+      </a></span> <span class="next"><a href="/scui-doc/guide/iconfont.html">
+        图标
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/scui-doc/assets/js/app.3cfde67c.js" defer></script><script src="/scui-doc/assets/js/2.195a8091.js" defer></script><script src="/scui-doc/assets/js/17.c2e29476.js" defer></script>
+  </body>
+</html>

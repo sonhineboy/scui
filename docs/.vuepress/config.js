@@ -36,10 +36,10 @@ module.exports = {
 					title: '进阶',
 					collapsable: false,
 					children: [
-						// ['/guide/1', '代码风格指南'],
-						// ['/guide/2', '引入外部模块'],
-						// ['/guide/3', '开发第一个组件'],
-						// ['/guide/4', '错误处理'],
+						['/guide/codestyle', '代码风格指南'],
+						['/guide/splitmod', '模块抽离'],
+						['/guide/iconfont', '图标'],
+						['/guide/global', '全局'],
 					]
 				},
 			],
@@ -48,7 +48,7 @@ module.exports = {
 					title: '组件',
 					collapsable: false,
 					children: [
-						['/vab/echarts', 'Echarts']
+						['/vab/', '介绍']
 					]
 				},
 			]

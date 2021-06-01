@@ -1,7 +1,7 @@
 ---   
 home: true
-heroImage: /hero.png
-actionText: 开启美好的事情
+heroImage: logo.png
+actionText: 立即开启美好的事情
 actionLink: /guide/
 features:
 - title: 简洁至上
