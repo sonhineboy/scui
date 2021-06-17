@@ -13,6 +13,7 @@ SCUI的宗旨是 让一切复杂的东西傻瓜化。
 │	├── assets			# 静态资源(会被打包)
 │	├── components		# 组件库
 │	├── config			# 配置
+│	├── directives		# 自定义指令
 │	├── layout			# 框架布局视图
 │	├── router			# 路由表
 │	├── store			# VUEX状态管理
