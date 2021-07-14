@@ -4,6 +4,7 @@ module.exports = {
 	description: '高性能中后台前端解决方案',
 	port: 2801,
 	themeConfig: {
+		logo: '/logo.png',
 		nav: [{
 			text: "指南",
 			link: "/guide/",
