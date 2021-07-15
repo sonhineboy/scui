@@ -2,7 +2,7 @@
 home: true
 ---
 
-<div class="banner">
+<div class="banner" :style="{backgroundImage:'url('+$withBase('/home-bg.png')+')'}"">
 	<div class="home-content">
 		<div class="welcome">
 			<h1>SCUI Admin</h1>
@@ -37,7 +37,7 @@ home: true
 	.home header {display: none;}
 	
 	.home-content {max-width:1140px;padding:0 2rem;margin:0 auto;}
-	.banner {text-align: center;background-color: #fbfbfd;background-image: url(/home-bg.png);background-size: cover;background-position: center center;background-repeat: no-repeat;border-bottom: 1px solid #eaecef;padding-top:80px;}
+	.banner {text-align: center;background-color: #fbfbfd;background-size: cover;background-position: center center;background-repeat: no-repeat;border-bottom: 1px solid #eaecef;padding-top:80px;}
 	.welcome h1 {font-size: 50px;font-weight: bold;margin: 0;}
 	.welcome h2 {font-size: 28px;font-weight: normal;border-bottom:0;}
 	.welcome h4 {font-size: 14px;font-weight: normal;color: #999;line-height: 1.8;}
