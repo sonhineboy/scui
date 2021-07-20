@@ -70,7 +70,8 @@ module.exports = {
 					title: '内置工具',
 					collapsable: false,
 					children: [
-						['/vab/print', 'print 打印']
+						['/vab/print', 'print 打印'],
+						['/vab/tool', 'tool 工具集']
 					]
 				},
 			]
