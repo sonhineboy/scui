@@ -63,7 +63,9 @@ module.exports = {
 						['/vab/table', 'scTable 数据表格'],
 						['/vab/tableselect', 'scTableSelect 表格选择器'],
 						['/vab/upload', 'scUpload 上传'],
-						['/vab/statistic', 'scStatistic 统计数值']
+						['/vab/statistic', 'scStatistic 统计数值'],
+						['/vab/cropper', 'scCropper 图像剪裁'],
+						['/vab/contextmenu', 'scContextmenu 右键菜单']
 					]
 				},
 				{
