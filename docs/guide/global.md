@@ -23,3 +23,6 @@
 |```@/config/table.js```		|规定请求参数名以及返回数据分析，pageSize等						|
 |```@/config/tableSelect.js```	|规定请求参数名以及返回数据分析，选中的label/value，pageSize等	|
 |```@/config/upload.js```		|请求API对象，maxSize，返回数据分析等							|
+|```@/config/filterBar.js```	|过滤器运算符配置，常用过滤的请求配置							|
+|```@/config/iconSelect.js```	|图标选择器配置							|
+|```@/config/select.js```		|异步、字典选择器配置							|

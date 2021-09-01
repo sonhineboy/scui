@@ -15,6 +15,7 @@ SCUI的宗旨是 让一切复杂的东西傻瓜化。
 │	├── config			# 配置
 │	├── directives		# 自定义指令
 │	├── layout			# 框架布局视图
+│	├── locales			# 国际化文本
 │	├── router			# 路由表
 │	├── store			# VUEX状态管理
 │	├── style			# 全局样式

@@ -23,3 +23,10 @@
 |--				|--											|--			|
 |selectionChange|当选择项发生变化时会触发该事件				|selection	|
 |currentChange	|当当表格的当前行发生变化的时候会触发该事件	|selection	|
+
+## Methods
+|方法名			|说明										|参数							|
+|--				|--											|--								|
+|refresh		|刷新表格									|					|
+|upData			|更新表格(合并上一次params)					|params, page		|
+|reload			|重载表格(替换params)							|params, page		|

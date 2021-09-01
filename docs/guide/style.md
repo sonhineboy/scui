@@ -21,12 +21,13 @@ Dock布局
 <img :src="$withBase('/demo4.jpg')">
 
 ## 样式
-采用less动态样式语言，还是那句话：约定大于配置。我们约定有个样式总入口，然后@import不同的类型。这样做在联合开发中有极大的便利。
+采用scss动态样式语言，还是那句话：约定大于配置。我们约定有个样式总入口，然后@import不同的类型。这样做在联合开发中有极大的便利。
 ``` sh
 ┌── style				# 全局样式
-│	├── style.less		# 总入口
-│	├── app.less		# 框架样式
-│	├── fix.less		# 第三方样式库的FIX文件
-│	├── pages.less		# 页面样式
-│	└── ***.less		# 其他自定义
+│	├── style.scss		# 总入口
+│	├── app.scss		# 框架样式
+│	├── fix.scss		# 第三方样式库的FIX文件
+│	├── media.scss		# 媒体查询样式(移动端样式)
+│	├── pages.scss		# 页面样式
+│	└── ***.scss		# 其他自定义
 ```
