@@ -23,3 +23,8 @@ select深度巧妙改造的表格选择器, 非常适用于大量数据选择的
 |page		|请求参数名，当前分页			|String	|-		|page		|
 |pageSize	|请求参数名，每页数据量			|String	|-		|pageSize	|
 |keyword	|请求参数名，远程搜索时的关键词	|String	|-		|keyword	|
+
+## Slot
+|name	|说明					|
+|--		|--						|
+|header	|表格上方插糟，传递参数包含{form, submit}	|
