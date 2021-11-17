@@ -1,46 +1,38 @@
 # 图标
-本项目虽然使用elementPlus作为UI底层，但它提供的图标很少，而且其中过半使用频率并不高。本项目精挑细选了上百个业务常务图标作为扩展，并且大部分都有线性和实心两种图标，可供大家使用。
+本项目1.4.0开始弃用iconfont，改为svg组件方式，为了使图标组件名称与其他组件发生冲突，SCUI在注册图标组件时使用了前缀
+- el-icon-* 为@element-plus/icons组件
+- sc-icon-* 为扩展的图标组件
 
-使用方式也和elementPlus的图标类似： ```.sc-icon-layout-line``` 。定义```class```就可以啦
+``` html
+<el-icon>
+	<el-icon-chat-dot-round />
+</el-icon>
+```
 
-很多开发朋友问我为什么不用 ```fontAwesome``` 呢？还是那句话：我不喜欢。最主要的一点是：可能就使用里面几个图标或十几个图标从而加载这么大的字体文件，这违背了SCUI的宗旨。
+因为SVG图标组件扩展非常便利，所以本项目并未集成很多的图标。使用者可以随意扩展“有用”的图标。
 
 ## 扩展图标
-建议使用iconFont，具体如何下载字体包这里不做阐述了。在 ```@/assets/font``` 中新增自己的图标库,记得在 ```@style/style.less``` 中引入。约定目录如下：
-``` sh
-#@/assets/font
-
-┌── font
-│	└── scicon
-│	│	├── iconfont.css
-│	│	├── iconfont.ttf
-│	│	├── iconfont.woff
-│	│	├── iconfont.woff2
-│	│	└── iconfont.json
-│	└── usericon
-│		├── iconfont.css
-│		├── iconfont.ttf
-│		├── iconfont.woff
-│		├── iconfont.woff2
-│		└── iconfont.json
-```
+使用svg组件方式后扩展图标将变得非常便利。大致分为两步
+- 1. @/assets/icons 中创建图标单文件组件
+- 2. @/assets/icons/index.js 导出
 
 ``` sh
-#@/style/style.less
+#@/assets/icons
 
-@import '~@/assets/font/scicon/iconfont.css'
-@import '~@/assets/font/usericon/iconfont.css'
+┌── icons
+│	├── index.js
+│	├── 图标单文件组件.vue
 ```
 
-## SVG
-~~使用iconFont svg模式，从iconfont下载的svg文件放在 @src/assets/icons 目录下，svg-sprite-loader将自动打包成SVG雪碧图。~~
-
-放弃iconFont svg模式。原因很简单，svg-sprite-loader生成的雪碧SVG很大，并且在首页头部就写入了，导致首页加载时间加长。
-
-那有没有异步加载svg的可能呢？有的，直接使用 ```img``` 标签加载```.SVG```就行了。
+### 关于自定义图标单文件组件
 ``` html
-<img src="../icon.svg" />
+// @/assets/icons/Code.vue
+
+<template>
+	<svg t="1637029965066" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4502" width="200" height="200"><path d="M981.333333 512l-301.696 301.696-60.330666-60.330667L860.672 512l-241.365333-241.365333 60.330666-60.330667L981.333333 512zM163.328 512l241.365333 241.365333-60.330666 60.330667L42.666667 512l301.696-301.696 60.330666 60.330667L163.328 512z" p-id="4503"></path></svg>
+</template>
 ```
-::: tip 提示
-低版本游览器并不支持img直接读取svg
-:::
+
+SVG代码推荐使用iconFont，可以很方便的复制SVG代码。
+
+推荐iconFont项目：[iconFont REMIX ICON](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=25353)

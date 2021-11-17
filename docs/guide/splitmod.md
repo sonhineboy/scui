@@ -9,7 +9,7 @@
 //vue.config.js
 
 splitChunks: {
-	chunks: "async",
+	chunks: "all",
 	automaticNameDelimiter: '~',
 	name: true,
 	cacheGroups: {
@@ -18,6 +18,10 @@ splitChunks: {
 			name: "modules",
 			test: /[\\/]node_modules[\\/]/,
 			priority: -10
+		},
+		elicons: {
+			name: "elicons",
+			test: /[\\/]node_modules[\\/]@element-plus[\\/]icons[\\/]/
 		},
 		tinymce: {
 			name: "tinymce",
@@ -34,11 +38,12 @@ splitChunks: {
 ``` sh
 ┌── dist
 │	└── js
-│	│	├── tinymce.c6a80879.js		# 编辑器所用到的依赖
-│	│	├── app.b69faaf9.js
-│	│	├── echarts.168c0bd1.js		# 百度echarts用到的依赖
-│	│	├── modules.533004cc.js
-│	│	└── ***.js
+│	│	├── modules.b98a1fa8.js		# 其他第三方依赖
+│	│	├── tinymce.a3eec3b4.js		# 富文本编辑器tinymce依赖
+│	│	├── echarts.c17b2673.js		# 百度echarts用到的依赖
+│	│	├── elicons.1733fe4c.js		# @element-plus/icons依赖
+│	│	├── app.73ba8337.js			# 项目框架
+│	│	└── ***.js					# 其他视图
 │	└── ***
 ```
 
