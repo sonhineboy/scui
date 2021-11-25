@@ -12,6 +12,8 @@
 |rowKey				|表格行唯一值，树形表格必填	|String	|-		|-									|
 |params				|远程数据默认请求参数		|Object	|-		|-									|
 |column				|可自定义的列				|Array	|-		|-									|
+|remoteSort			|是否开启远程排序			|Boolean|-		|false								|
+|remoteFilter		|是否开启远程过滤			|Boolean|-		|false								|
 |hidePagination		|是否隐藏分页				|Boolean|-		|false								|
 |hideDo				|是否隐藏工具栏				|Boolean|-		|false								|
 |stripe				|是否开启斑马纹				|Boolean|-		|false								|
