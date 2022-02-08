@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><title>scui</title><script>document.write("<script src='config.js?"+new Date().getTime()+"'><\/script>");</script><link href="css/modules.42c98836.css" rel="stylesheet"><link href="css/app.84afa401.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but scui doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><script>var theme = window.localStorage.getItem('APP_THEME');
+=======
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><title>scui</title><script>document.write("<script src='config.js?"+new Date().getTime()+"'><\/script>");</script><link href="css/modules.42c98836.css" rel="stylesheet"><link href="css/app.fab46a77.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but scui doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><script>var theme = window.localStorage.getItem('APP_THEME');
+>>>>>>> Stashed changes
 			if(theme){
 				document.body.setAttribute('data-theme',  JSON.parse(theme))
 			}</script><div id="app" class="aminui"><div class="app-loading"><div class="app-loading__logo"><img src="img/logo.png"></div><div class="app-loading__loader"></div><div class="app-loading__title">scui</div></div><style>.app-loading {position: absolute;top:0px;left:0px;right:0px;bottom:0px;display: flex;justify-content: center;align-items: center;flex-direction: column;background: #fff;}
@@ -17,4 +21,58 @@
 				    100% {
 				        transform: rotate(360deg);
 				    }
+<<<<<<< Updated upstream
 				}</style></div><script src="js/elicons.626b260a.js"></script><script src="js/modules.784be84a.js"></script><script src="js/app.ffdb95eb.js"></script></body></html>
+=======
+				}</style></div><script src="js/elicons.626b260a.js"></script><script src="js/modules.d43d4462.js"></script><script src="js/app.3f0e5cb3.js"></script></body><div id="versionCheck" style="display: none;position: absolute;z-index: 99;top:0;left:0;right:0;bottom:0;padding:40px;background:rgba(255,255,255,0.9);color: #333;"><h2 style="line-height: 1;margin: 0;font-size: 24px;">当前使用的浏览器内核版本过低 :(</h2><p style="line-height: 1;margin: 0;font-size: 14px;margin-top: 20px;opacity: 0.8;">当前版本：<span id="versionCheck-type">--</span> <span id="versionCheck-version">--</span></p><p style="line-height: 1;margin: 0;font-size: 14px;margin-top: 10px;opacity: 0.8;">最低版本要求：Chrome 71+、Firefox 65+、Safari 12+、Edge 97+。</p><p style="line-height: 1;margin: 0;font-size: 14px;margin-top: 10px;opacity: 0.8;">请升级浏览器版本，或更换现代浏览器，如果你使用的是双核浏览器,请切换到极速/高速模式。</p></div><script>function getBrowerInfo(){
+		var userAgent = window.navigator.userAgent;
+		var browerInfo = {
+			type: '',
+			version: '',
+			userAgent: userAgent
+		};
+		if(document.documentMode){
+			browerInfo.type = "IE"
+			browerInfo.version = document.documentMode + ''
+		}else if(userAgent.indexOf("Firefox") > -1){
+			browerInfo.type = "Firefox"
+		}else if(userAgent.indexOf("Opera") > -1){
+			browerInfo.type = "Opera"
+			browerInfo.version = userAgent.match(/Opera\/([\d.]+)/)[1]
+		}else if(userAgent.indexOf("Edg") > -1){
+			browerInfo.type = "Edg"
+			browerInfo.version = userAgent.match(/Edg\/([\d.]+)/)[1]
+		}else if(userAgent.indexOf("Chrome") > -1){
+			browerInfo.type = "Chrome"
+			browerInfo.version = userAgent.match(/Chrome\/([\d.]+)/)[1]
+		}else if(userAgent.indexOf("Safari") > -1){
+			browerInfo.type = "Safari"
+			browerInfo.version = userAgent.match(/Safari\/([\d.]+)/)[1]
+		}else{
+			browerInfo.type = "unknown"
+			browerInfo.version = "unknown"
+		}
+		return browerInfo
+	}
+	function isSatisfyBrower(){
+		var minVer = {
+			"Chrome": 71,
+			"Firefox": 65,
+			"Safari": 12,
+			"Edg": 97,
+			"IE": 999
+		}
+		var browerInfo = getBrowerInfo()
+		var materVer = browerInfo.version.split('.')[0]
+		if(materVer >= minVer[browerInfo.type]){
+			return true
+		}else{
+			return false
+		}
+	}
+	if(!isSatisfyBrower()){
+		document.getElementById('versionCheck').style.display = 'block';
+		document.getElementById('versionCheck-type').innerHTML = getBrowerInfo().type;
+		document.getElementById('versionCheck-version').innerHTML = getBrowerInfo().version;
+	}</script></html>
+>>>>>>> Stashed changes
