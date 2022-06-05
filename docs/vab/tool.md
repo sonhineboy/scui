@@ -17,4 +17,4 @@
 将数字转换成千分符数字
 
 ### crypto
-将CryptoJS封装，现支持常用的前端加解密：MD5、BASE64、AES
+将CryptoJS封装，现支持常用的：MD5、BASE64、AES
