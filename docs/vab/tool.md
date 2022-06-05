@@ -7,13 +7,13 @@
 ### screen
 封装的全屏或者DOM全屏
 
-
+### objCopy
+简单的对象深拷贝
 
 ### dateFormat
 封装的日期格式化
 
-### groupSeparator
-将数字转换成千分符数字
+
 
 ### crypto
 将CryptoJS封装，现支持常用的：MD5、BASE64、AES
