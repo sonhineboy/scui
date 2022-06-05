@@ -6,7 +6,7 @@ scUpload组件已经内置了裁剪功能
 - 固定剪裁比例
 - 实时预览
 - 支持设置图像压缩率
-- 支持导出Base64，Blob，File对象
+- 支持导出Blob，File对象
 
 [演示地址](https://lolicode.gitee.io/scui-doc/demo/#/vab/cropper)
 > 演示地址需模拟登录高权限角色后查看
@@ -22,6 +22,6 @@ scUpload组件已经内置了裁剪功能
 |方法名			|说明										|参数							|
 |--				|--											|--								|
 |setAspectRatio	|重新设定剪裁比例								|aspectRatio					|
-|getCropData	|获取裁剪后的	Base64							|cb,type (文件类型，默认image/jpeg)	|
+|getCropData	|获取裁剪后的数据								|cb,type (文件类型，默认image/jpeg)	|
 |getCropBlob	|获取裁剪后的	Blob							|cb,type							|
 |getCropFile	|获取裁剪后的	File							|cb,fileName,type					|
