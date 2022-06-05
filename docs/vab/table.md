@@ -17,7 +17,7 @@
 |hidePagination		|是否隐藏分页				|Boolean|-		|false								|
 |hideDo				|是否隐藏工具栏				|Boolean|-		|false								|
 |stripe				|是否开启斑马纹				|Boolean|-		|false								|
-|highlightCurrentRow|是否要高亮选中行			|Boolean|-		|false								|
+|highlightCurrentRow|是否要选中行活动状态			|Boolean|-		|false								|
 |paginationLayout	|分页布局					|String	|-		|total, prev, pager, next, jumper	|
 
 ## Event
