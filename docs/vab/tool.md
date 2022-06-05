@@ -16,3 +16,5 @@
 ### groupSeparator
 将数字转换成千分符数字
 
+### crypto
+将CryptoJS封装
