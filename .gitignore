@@ -1,8 +1,6 @@
 .DS_Store
 node_modules
 /.temp
-/dist
-
 
 # Editor directories and files
 .idea

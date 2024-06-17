@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>和服务端进行交互 | SCUI</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="高性能中后台前端解决方案">
+    
+    <link rel="preload" href="/scui-doc/assets/css/0.styles.b3cdf173.css" as="style"><link rel="preload" href="/scui-doc/assets/js/app.57d62e9a.js" as="script"><link rel="preload" href="/scui-doc/assets/js/2.0043a072.js" as="script"><link rel="preload" href="/scui-doc/assets/js/16.0c1dd013.js" as="script"><link rel="prefetch" href="/scui-doc/assets/js/10.c421e616.js"><link rel="prefetch" href="/scui-doc/assets/js/11.3537ed1a.js"><link rel="prefetch" href="/scui-doc/assets/js/12.f406120f.js"><link rel="prefetch" href="/scui-doc/assets/js/13.7004d357.js"><link rel="prefetch" href="/scui-doc/assets/js/14.faa05c3b.js"><link rel="prefetch" href="/scui-doc/assets/js/15.6a223bf1.js"><link rel="prefetch" href="/scui-doc/assets/js/17.6a646095.js"><link rel="prefetch" href="/scui-doc/assets/js/18.46d2a0ce.js"><link rel="prefetch" href="/scui-doc/assets/js/19.d4e23178.js"><link rel="prefetch" href="/scui-doc/assets/js/20.81f9a725.js"><link rel="prefetch" href="/scui-doc/assets/js/21.ec095401.js"><link rel="prefetch" href="/scui-doc/assets/js/22.5bf2f107.js"><link rel="prefetch" href="/scui-doc/assets/js/23.12063b45.js"><link rel="prefetch" href="/scui-doc/assets/js/24.4c31606e.js"><link rel="prefetch" href="/scui-doc/assets/js/25.fddb3cd0.js"><link rel="prefetch" href="/scui-doc/assets/js/26.b603e4e0.js"><link rel="prefetch" href="/scui-doc/assets/js/27.e2bf019f.js"><link rel="prefetch" href="/scui-doc/assets/js/28.41ca7bd6.js"><link rel="prefetch" href="/scui-doc/assets/js/29.24e85aab.js"><link rel="prefetch" href="/scui-doc/assets/js/3.023044c5.js"><link rel="prefetch" href="/scui-doc/assets/js/30.b5295543.js"><link rel="prefetch" href="/scui-doc/assets/js/31.9206d107.js"><link rel="prefetch" href="/scui-doc/assets/js/32.51ae0ef5.js"><link rel="prefetch" href="/scui-doc/assets/js/4.c08e9be4.js"><link rel="prefetch" href="/scui-doc/assets/js/5.ca3722f1.js"><link rel="prefetch" href="/scui-doc/assets/js/6.95bc830a.js"><link rel="prefetch" href="/scui-doc/assets/js/7.79a33cd8.js"><link rel="prefetch" href="/scui-doc/assets/js/8.2e7ea06d.js"><link rel="prefetch" href="/scui-doc/assets/js/9.53becae9.js">
+    <link rel="stylesheet" href="/scui-doc/assets/css/0.styles.b3cdf173.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/scui-doc/" class="home-link router-link-active"><img src="/scui-doc/logo.png" alt="SCUI" class="logo"> <span class="site-name can-hide">SCUI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/scui-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/scui-doc/vab/" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="https://lolicode.gitee.io/scui-doc/demo#login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  演示地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/lolicode/scui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/scui-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/scui-doc/vab/" class="nav-link">
+  组件
+</a></div><div class="nav-item"><a href="https://lolicode.gitee.io/scui-doc/demo#login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  演示地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/lolicode/scui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scui-doc/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/scui-doc/guide/router.html" class="sidebar-link">路由</a></li><li><a href="/scui-doc/guide/style.html" class="sidebar-link">布局样式</a></li><li><a href="/scui-doc/guide/server.html" aria-current="page" class="active sidebar-link">和服务端进行交互</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/scui-doc/guide/server.html#请求流程" class="sidebar-link">请求流程</a></li><li class="sidebar-sub-header"><a href="/scui-doc/guide/server.html#统一api列表管理" class="sidebar-link">统一API列表管理</a></li><li class="sidebar-sub-header"><a href="/scui-doc/guide/server.html#统一的请求拦截" class="sidebar-link">统一的请求拦截</a></li><li class="sidebar-sub-header"><a href="/scui-doc/guide/server.html#如何使用" class="sidebar-link">如何使用？</a></li><li class="sidebar-sub-header"><a href="/scui-doc/guide/server.html#请求错误处理" class="sidebar-link">请求错误处理</a></li></ul></li><li><a href="/scui-doc/guide/newPage.html" class="sidebar-link">第一个页面</a></li><li><a href="/scui-doc/guide/build.html" class="sidebar-link">构建与部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scui-doc/guide/codestyle.html" class="sidebar-link">代码风格指南</a></li><li><a href="/scui-doc/guide/splitmod.html" class="sidebar-link">模块抽离</a></li><li><a href="/scui-doc/guide/iconfont.html" class="sidebar-link">图标</a></li><li><a href="/scui-doc/guide/global.html" class="sidebar-link">全局</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="和服务端进行交互"><a href="#和服务端进行交互" class="header-anchor">#</a> 和服务端进行交互</h1> <h2 id="请求流程"><a href="#请求流程" class="header-anchor">#</a> 请求流程</h2> <p>SCUI封装<code>axios</code>后可以优雅的请求后端API，一个完整的前端交互到服务端处理流程是这样的</p> <ol><li>UI组件交互操作</li> <li>通过统一管理的API对象列表</li> <li>通过统一请求拦截</li> <li>使用封装的请求库发送请求</li> <li>等待服务端返回结果</li> <li>结果处理</li> <li>更新视图</li></ol> <h2 id="统一api列表管理"><a href="#统一api列表管理" class="header-anchor">#</a> 统一API列表管理</h2> <p>为了方便管理和维护API接口地址，我们将所有的请求都放在<code>@api</code>文件夹中，并且按照约定的对象格式编写API对象，
+最后SCUI将API对象列表挂载在VUE中，使用<code>this.$API</code>，使其在任何地方都可以调用，而不用每次都引入。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>login<span class="token operator">:</span> <span class="token punctuation">{</span>
+	url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">APIURL</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/login</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>						<span class="token comment">//APIURL</span>
+	name<span class="token operator">:</span> <span class="token string">&quot;用户登录&quot;</span><span class="token punctuation">,</span>							<span class="token comment">//API名称</span>
+	<span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>					<span class="token comment">//请求方法</span>
+		<span class="token keyword">return</span> <span class="token keyword">await</span> http<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="统一的请求拦截"><a href="#统一的请求拦截" class="header-anchor">#</a> 统一的请求拦截</h2> <p>在每一次发送请求前，请求库都会有个钩子函数处理发送前的各类参数。比如在请求头部里添加Authorization。
+相关配置在 <code>@utils/request.js</code> HTTP request 拦截器中。</p> <h2 id="如何使用"><a href="#如何使用" class="header-anchor">#</a> 如何使用？</h2> <p>在定义好API对象后就可以在VUE视图文件或JS文件中调用此对象了。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+		user<span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+		password<span class="token operator">:</span> <span class="token string">&quot;123&quot;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">var</span> userInfo <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$<span class="token constant">API</span><span class="token punctuation">.</span>user<span class="token punctuation">.</span>login<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="请求错误处理"><a href="#请求错误处理" class="header-anchor">#</a> 请求错误处理</h2> <p>错误分为两种，一种是接口服务端正常而业务错误错误，比如密码错误，用户名不存在。第二种为服务端报错，比如500了。</p> <p>第一种处理比较方便，一般接口都会约定在返回的数据中含有code节点，然后根据code值该弹窗的弹窗就行了。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//返回成功</span>
+<span class="token punctuation">{</span>
+	code<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+	data<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	msg<span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//返回失败</span>
+<span class="token punctuation">{</span>
+	code<span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
+	data<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	msg<span class="token operator">:</span> <span class="token string">&quot;用户名不存在&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>而第二种是服务端报错,HTTP请求返回报错了。可以使用try，catch包围$API就可以捕捉到错误，我们拿本文第一个例子举例：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+		user<span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+		password<span class="token operator">:</span> <span class="token string">&quot;123&quot;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">try</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> userInfo <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$<span class="token constant">API</span><span class="token punctuation">.</span>user<span class="token punctuation">.</span>login<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//这里捕捉到错误</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>值得一说的是，在大部分编写中，大家不必特意编写try，catch，因为在封装的请求库中已经对第二种报错做了统一的弹窗提示。
+相关代码<code>@utils/request.js</code></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/scui-doc/guide/style.html" class="prev">
+        布局样式
+      </a></span> <span class="next"><a href="/scui-doc/guide/newPage.html">
+        第一个页面
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/scui-doc/assets/js/app.57d62e9a.js" defer></script><script src="/scui-doc/assets/js/2.0043a072.js" defer></script><script src="/scui-doc/assets/js/16.0c1dd013.js" defer></script>
+  </body>
+</html>
